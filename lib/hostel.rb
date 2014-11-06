@@ -1,5 +1,13 @@
-require "hostel/version"
+require 'hostel/version'
+require 'acclimate'
+require 'autoloaded'
 
 module Hostel
-  # Your code goes here...
+
+  extend Autoloaded
+
+  class << self
+    attr_accessor :provider_klass
+  end
+
 end
